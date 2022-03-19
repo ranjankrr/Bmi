@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Bmi/static/css/main.b04d86e2.css",
+    "main.js": "/Bmi/static/js/main.3350f557.js",
+    "index.html": "/Bmi/index.html",
+    "main.b04d86e2.css.map": "/Bmi/static/css/main.b04d86e2.css.map",
+    "main.3350f557.js.map": "/Bmi/static/js/main.3350f557.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b04d86e2.css",
+    "static/js/main.3350f557.js"
+  ]
+}
