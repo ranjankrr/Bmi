@@ -1,25 +1,52 @@
-import logo from './logo.svg';
+import React,{useState} from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = ()=>{
+  let [height, setHeight] = useState();
+  let [weight, setWeight] = useState();
+  let [result, setResult] = useState();
+  let [status, setStatus] = useState();
 
+  const CalculateBMI = ()=>{
+    let bmi =(weight /(height/100)**2).toFixed(2);
+    setResult(bmi);
+    let bmiStatus = getStatus(bmi);
+    setStatus(bmiStatus);
+
+    setHeight("");
+    setWeight("");
+
+  }
+
+  const getStatus = (bmi)=>{
+      if (bmi <18.9) return "Underweight";
+      else if (bmi >= 18.9 && bmi <25.4) return "Normal";
+      else if(bmi >=26 && bmi <30) return "Overweight";
+      else return "Obese";
+      
+  }
+        
+  return(
+    <>
+       <div className="main-container">
+          <div className="container">
+            <h2>BMI Calculator</h2>
+            <input type="text"  placeholder='Please Enter Your Height'
+              vlaue={height}
+              onChange={(e)=>{setHeight(e.target.value)}}
+            />
+            <input type="text"  placeholder='Please Enter Your Weight'
+                value={weight}
+                onChange={(e)=>{setWeight(e.target.value)}}
+            />
+            <button onClick={CalculateBMI}>BMI Calculate</button>
+            <div className="result-btn">
+              <p>Your BMI IS :{result}</p>
+              <p>Your Currently Status :{status}</p>
+            </div>
+         </div>
+        </div>
+    </>
+  )
+}
 export default App;
