@@ -32,7 +32,7 @@ const App = ()=>{
           <div className="container">
             <h2>BMI Calculator</h2>
             <input type="text"  placeholder='Please Enter Your Height'
-              vlaue={height}
+              value={height}
               onChange={(e)=>{setHeight(e.target.value)}}
             />
             <input type="text"  placeholder='Please Enter Your Weight'
