@@ -12,7 +12,7 @@ const App = ()=>{
     setResult(bmi);
     let bmiStatus = getStatus(bmi);
     setStatus(bmiStatus);
-
+    console.log(setHeight(""))
     setHeight("");
     setWeight("");
 
