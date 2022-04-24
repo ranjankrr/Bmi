@@ -38,6 +38,7 @@ h2{
 }
 input{
   border-radius: 10px;
+  outline: none;
   box-shadow: inset 2px 5px 6px gray;
   border:0px;
   width:270px;
@@ -67,4 +68,7 @@ button:hover{
   margin-top:50px;
   margin-left:15px;
 
+}
+span{
+  color:green;
 }

@@ -12,7 +12,7 @@ const App = ()=>{
     setResult(bmi);
     let bmiStatus = getStatus(bmi);
     setStatus(bmiStatus);
-
+    
     setHeight("");
     setWeight("");
 
@@ -31,18 +31,18 @@ const App = ()=>{
        <div className="main-container">
           <div className="container">
             <h2>BMI Calculator</h2>
-            <input type="text"  placeholder='Please Enter Your Height'
-              vlaue={height}
+            <input type="text"  placeholder='Enter Your Height in cm'
+              value={height}
               onChange={(e)=>{setHeight(e.target.value)}}
             />
-            <input type="text"  placeholder='Please Enter Your Weight'
+            <input type="text"  placeholder='Enter Your Weight in kg'
                 value={weight}
                 onChange={(e)=>{setWeight(e.target.value)}}
             />
             <button onClick={CalculateBMI}>BMI Calculate</button>
             <div className="result-btn">
-              <p>Your BMI IS :{result}</p>
-              <p>Your Currently Status :{status}</p>
+              <p>Your BMI IS :<span>{result}</span></p>
+              <p>Your Currently Status :<span>{status}</span></p>
             </div>
          </div>
         </div>
