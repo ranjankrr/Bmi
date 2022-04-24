@@ -31,11 +31,11 @@ const App = ()=>{
        <div className="main-container">
           <div className="container">
             <h2>BMI Calculator</h2>
-            <input type="text"  placeholder='Please Enter Your Height in cm'
+            <input type="text"  placeholder='Please Enter Your Height in CM'
               value={height}
               onChange={(e)=>{setHeight(e.target.value)}}
             />
-            <input type="text"  placeholder='Please Enter Your Weight in kg'
+            <input type="text"  placeholder='Please Enter Your Weight in Kg'
                 value={weight}
                 onChange={(e)=>{setWeight(e.target.value)}}
             />
